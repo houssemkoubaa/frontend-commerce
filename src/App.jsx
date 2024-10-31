@@ -1,23 +1,25 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import 'bootstrap/dist/css/bootstrap.min.css';
+import "bootstrap/dist/css/bootstrap.min.css";
 import "@fortawesome/fontawesome-free/css/all.css";
-import Listarticles from './components/articles/Listarticles';
-import Insertarticle from './components/articles/Insertarticle';
-import Editarticle from './components/articles/Editarticle';
-import Viewarticle from './components/articles/Viewarticle';
-import Listcategories from './components/categories/Listcategories';
-import Insertcategorie from './components/categories/Insertcategorie';
-import Editcategorie from './components/categories/Editcategorie';
-import Viewcategorie from './components/categories/Viewcategorie';
-import Listscategories from './components/scategories/Listscategories';
-import Insertscategorie from './components/scategories/Insertscategorie';
-import Editscategorie from './components/scategories/Editscategorie';
-import Viewscategorie from './components/scategories/Viewscategorie';
+import Listarticles from "./components/articles/Listarticles";
+import Editarticle from "./components/articles/Editarticle";
+import Viewarticle from "./components/articles/Viewarticle";
+import Listcategories from "./components/categories/Listcategories";
+import Insertcategorie from "./components/categories/Insertcategorie";
+import Editcategorie from "./components/categories/Editcategorie";
+import Viewcategorie from "./components/categories/Viewcategorie";
+import Listscategories from "./components/scategories/Listscategories";
+import Insertscategorie from "./components/scategories/Insertscategorie";
+import Editscategorie from "./components/scategories/Editscategorie";
+import Viewscategorie from "./components/scategories/Viewscategorie";
+import Menu from "./components/Menu";
+import Insertarticle from "./components/articles/Insertarticle";
 
 function App() {
   return (
     <>
       <Router>
+        <Menu />
         <Routes>
           <Route path="/articles" element={<Listarticles />} />
           <Route path="/articles/add" element={<Insertarticle />} />
@@ -34,6 +36,6 @@ function App() {
         </Routes>
       </Router>
     </>
-  )
+  );
 }
-export default App
+export default App;
